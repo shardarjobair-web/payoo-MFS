@@ -1,11 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>I am home page</h1>
-</body>
+    <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F4F5F7] h-[100vh]">
+    <div class="max-w-lg mx-auto bg-white rounded-b-xl ">
+      <div
+      class="min-h-[50px] flex justify-between items-center max-w-lg mx-auto border-b border-gray-400 p-3"
+    >
+      <div class="flex">
+        <img src="./assets/Group.png" class="h-[50px]" alt="" />
+        <div class="ml-3">
+          <h2 class="font-bold">$<span>45000</span></h2>
+          <p class="text-[#08080880]">Available Balance</p>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="btn text-[#08080880] bg-white shadow-sm hover:bg-gray-50 border border-gray-200 flex items-center gap-2 px-4 rounded-xl"
+        >
+          <i class="fa-solid fa-right-from-bracket rotate-180 text-gray-500"></i
+          >Log Out
+        </button>
+      </div>
+    </div>
+
+    <div class="max-w-lg mx-auto mt-8 p-3">
+      <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+      <p class="text-[#08080880] mt-4">
+        Enjoy easy and convenient financial services with us. Cashout charge is
+        low and
+      </p>
+    </div>
+
+    <div class="max-w-lg mx-auto  min-h-[200px] grid grid-cols-3 gap-4 p-3">
+      <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <img src="./assets/wallet1.png" class="mx-auto" alt="" />
+        <h2>Add Money</h2>
+      </div>
+      <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <img src="./assets/send1.png" class="mx-auto" alt="" />
+        <h2>Cashout</h2>
+      </div>
+      <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <img src="./assets/money1.png" class="mx-auto" alt="" />
+        <h2>Transfer Money</h2>
+      </div>
+      <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <img src="./assets/bonus1.png" class="mx-auto" alt="" />
+        <h2>Get Bonus</h2>
+      </div>
+      <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <img src="./assets/purse1.png" class="mx-auto" alt="" />
+        <h2>Pay Bill</h2>
+      </div>
+      <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <img src="./assets/transaction1.png" class="mx-auto" alt="" />
+        <h2>Transactions</h2>
+      </div>
+    </div>
+    </div>
+
+
+
+  </body>
 </html>
