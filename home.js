@@ -28,14 +28,22 @@ document.getElementById("add-money-btn").addEventListener("click", function(e){
 
 })
 
-// cash out money feature
-
-document.getElementById("withdraw-btn").addEventListener("click", function(e){
+// cashout money feature
+document.getElementById("withdraw-btn").addEventListener("click", function (e){
     e.preventDefault()
 
-    const amount =parseInt(document.getElementById("withdraw-amount").value) 
+    const amount = parseInt(document.getElementById("withdraw-amount").value)
 
-    const availableBalance = parseInt(document.getElementById ("available-balance").innerText)
+    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+
+    
+    // console.log(amount, availableBalance)
+
+    const totalNewAvailableBalance = availableBalance - amount
+    
+    console.log(totalNewAvailableBalance)
+
+    document.getElementById("available-balance").innerText = totalNewAvailableBalance
 })
 
 
