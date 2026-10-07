@@ -31,7 +31,7 @@
         <div class="flex">
           <img src="./assets/Group.png" class="h-[50px]" alt="" />
           <div class="ml-3">
-            <h2 class="font-bold">$<span>45000</span></h2>
+            <h2 class="font-bold">$<span id="available-balance">45000</span></h2>
             <p class="text-[#08080880]">Available Balance</p>
           </div>
         </div>
@@ -57,23 +57,23 @@
       </div>
 
       <div class="max-w-lg mx-auto min-h-[200px] grid grid-cols-3 gap-4 p-3">
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="add-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
           <img src="./assets/wallet1.png" class="mx-auto" alt="" />
           <h2>Add Money</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="cash-out-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
           <img src="./assets/send1.png" class="mx-auto" alt="" />
           <h2>Cashout</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="transfer-money-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
           <img src="./assets/money1.png" class="mx-auto" alt="" />
           <h2>Transfer Money</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="get-bonus-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
           <img src="./assets/bonus1.png" class="mx-auto" alt="" />
           <h2>Get Bonus</h2>
         </div>
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div id="pay-bill-button" class="border-2 border-gray-300 text-center p-3 rounded-xl">
           <img src="./assets/purse1.png" class="mx-auto" alt="" />
           <h2>Pay Bill</h2>
         </div>
@@ -87,12 +87,12 @@
     <!-- all form section -->
     <div class="all-form-section max-w-lg mx-auto">
       <!-- add maoney -->
-      <div>
+      <div id="add-money-parent">
         <h1 class="my-5 font-bold ml-4">Add Money</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mb-3">
             <h1 class="font-semibold">Select A Bank</h1> 
-            <select class="select bg-[#F4F5F7] mt-3 rounded-3xl px-3 w-full">
+            <select id="bank" class="select bg-[#F4F5F7] mt-3 rounded-3xl px-3 w-full">
             <option>Select Bank</option>
             <option>AB BANK</option>
             <option>IFIC BANK</option>
@@ -102,7 +102,7 @@
           <div class="mb-3">
             <label class="font-semibold" for="">Bank Account Number</label>
             <br/>
-            <input
+            <input id="account-number"
                 type="text"
                 placeholder="Enter 11 digit account number" id="mobile-number"
                 class="input bg-[#F4F5F7] mt-3 rounded-3xl px-5 w-full"/>
@@ -111,7 +111,7 @@
           <div class="mb-3 mt-3">
             <label class="font-semibold" for="">Amount to Add</label>
             <br/>
-            <input
+            <input id="add-amount"
                 type="text"
                 placeholder="Add Amount to withdraw" id="mobile-number"
                 class="input bg-[#F4F5F7] mt-3 rounded-3xl px-5 w-full"/>
@@ -119,7 +119,7 @@
           <div class="mb-3 mt-3">
             <label class="font-semibold" for="">Pin Number</label>
             <br/>
-            <input
+            <input id="add-pin"
                 type="text"
                 placeholder="Enter 4 digit pin number" id="mobile-number"
                 class="input bg-[#F4F5F7] mt-3 rounded-3xl px-5 w-full"/>
@@ -132,9 +132,8 @@
         </form>
       </div>
 
-
       <!-- Cash Out -->
-       <div>
+       <div id="cash-out-parent" style="display: none;">
         <h1 class="my-5 font-bold ml-4">Cash Out</h1>
         <form action="" class="bg-white rounded-2xl p-8">
       
@@ -150,7 +149,7 @@
           <div class="mb-3 mt-3">
             <label class="font-semibold" for="">Amount</label>
             <br/>
-            <input
+            <input id="withdraw-amount"
                 type="text"
                 placeholder="Enter amount to withdraw" id="mobile-number"
                 class="input bg-[#F4F5F7] mt-3 rounded-3xl px-5 w-full"/>
@@ -164,7 +163,7 @@
                 class="input bg-[#F4F5F7] mt-3 rounded-3xl px-5 w-full"/>
           </div>
 
-          <button id="add-money-btn"
+          <button id="withdraw-btn"
         class="btn text-white bg-[#0874F2] btn-active mt-5 w-full rounded-3xl"
       >Withdraw Money</button>
           
@@ -172,7 +171,7 @@
       </div>
 
       <!-- Transfer Money -->
-       <div>
+       <div id="transfer-money-parent" style="display: none;">
         <h1 class="my-5 font-bold ml-4">Transfer Moneyt</h1>
         <form action="" class="bg-white rounded-2xl p-8">
       
@@ -210,7 +209,7 @@
       </div>
 
       <!-- Get Bonus -->
-       <div>
+       <div id="get-bonus-parent" style="display: none;>
         <h1 class="my-5 font-bold ml-4">Get Bonus</h1>
         <form action="" class="bg-white rounded-2xl p-8">
       
@@ -231,7 +230,7 @@
       </div>
 
       <!-- Pay Bill -->
-       <div>
+       <div id="pay-bill-parent" style="display: none;>
         <h1 class="my-5 font-bold ml-4">Pay Bill</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mb-3">
@@ -274,6 +273,8 @@
       >Add Money</button>
           
         </form>
+      </div>
+
       </div>
 
 
